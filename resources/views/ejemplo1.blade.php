@@ -1,0 +1,1 @@
+<h1>hola <?php echo $var ?></h1>

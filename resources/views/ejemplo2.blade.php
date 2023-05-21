@@ -1,0 +1,1 @@
+<h1>El mayor es : <?php echo $res; ?></h1>

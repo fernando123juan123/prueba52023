@@ -1,0 +1,212 @@
+<!DOCTYPE>
+<html lang="es">
+<head>
+  <title>Inicia Sesión</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+	
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/style_uno.css" rel="stylesheet">
+
+  <!-- Fav and touch icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/apple-touch-icon-144-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/apple-touch-icon-114-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/apple-touch-icon-72-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" href="img/apple-touch-icon-57-precomposed.png">
+  <link rel="shortcut icon" href="img/favicon.png">
+  
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/scripts.js"></script>
+</head>
+
+<body>
+<!--inicio header-->
+<div class="header">
+	<h2>Formulario Avanzado</h2>
+</div>
+<!--fin header-->
+
+<!--inicio container-->
+<div class="container">
+	<div class="row clearfix" id="row_espacio">
+		<div class="col-md-7 col-md-offset-3">
+			<!--inicio formularios-->
+			<form  id="form2" role="form" method="POST" action="registar_alumnos.php">
+				<div class="panel panel-defult" id="panel2">
+
+					<div class="panel-heading" id="pane">
+    					<p id="p2" class="panel-title text-center text-primary"><strong>Datos del Alumno</strong></p>
+  					</div>
+
+					<div class="panel-body">
+						<div id="ci" class="col-md-5">
+							<div class="form-group1 ">
+    							<label for="carnet">C.I/C.N.:</label>
+        						<input type="number" class="form-control input-sm" id="inpuCarnet" name="carnet" placeholder="C.I./Certificado de Nacimiento" required="required">
+			    			</div>
+						</div>
+
+						<div class="col-md-1 col-md-offset-2"></div>
+
+						<div id="rude" class="col-md-4">
+							<div class="form-group1">
+    							<label for="carnet">Cod.RUDE:</label>
+        						<input type="text" class="form-control input-sm" id="inpuRude" name="rude" placeholder="Codigo de Estudiante" required="required">
+			    			</div>
+						</div>
+   
+						<div id="paterno" class="col-md-4">
+							<div class="form-group1">
+			    				<label for="apellidoPaterno">Apellido Paterno:</label>
+								<input type="text" required pattern="[a-zA-Z]*"  class="form-control input-sm" id="apellidoPaterno" name="ap_paterno" placeholder="Apellido Paterno">
+			    			</div>
+						</div>
+
+						<div id="materno" class="col-md-4">
+							<div class="form-group1">
+			    				<label for="apellidoMaterno">Apellido Materno:</label>
+								<input type="text" required pattern="[a-zA-Z]*" class="form-control input-sm" id="apellidoMaterno" name="ap_materno" placeholder="Apellido Materno">
+			    			</div>
+						</div>
+
+						<div id="nombre" class="col-md-4">
+							<div class="form-group1">
+			    				<label for="nombres">Nombre(s):</label>
+								<input type="text" required pattern="[a-zA-Z]*" class="form-control input-sm" id="nombres" name="nombres" placeholder="Nombres">
+			    			</div>
+						</div>
+
+						<div id="fechanaCimiento" class="col-md-4">
+							<div class="form-group1">
+			    				<label for="fechanacimiento">Fecha de Nacimiento:</label>
+			    				<input type="date" class="form-control input-sm" id="fechaNacimiento" name="fechaNacimiento">
+			    			</div>
+						</div>
+
+						<div id="edad" class="col-md-2">
+							<div class="form-group1">
+			    				<label for="edad">Edad:</label>
+			    				<input type="number" class="form-control input-sm" id="edad" name="edad" required="required">
+			    			</div>
+						</div>
+
+						<div class="col-md-1 col-md-offset-1"></div>
+
+						<div class="col-md-1">
+							<div id="genero" class="form-group1">
+			    				<label class="control-label col-md-1">Genero:</label><br>
+
+								<div class="col-md-2" id="labelMasculino">
+			            			<label class="radio-inline">
+			                			<input type="radio" name="genero" value="masculino">Maculino
+			            			</label>
+                            	</div>
+
+			        			<div class="col-md-2" id="labelfemenino">
+			            			<label class="radio-inline">
+			                			<input type="radio" name="genero" value="femenino">Femenino
+			            			</label>
+			        			</div>	
+			    			</div>
+						</div>
+					</div>
+				</div>
+
+
+				<div class="panel panel-default" id="panel3">
+					<div class="panel-heading" id="pane">
+    					<p id="p2" class="panel-title text-center text-primary"><strong>Datos domicilio</strong></p>
+  					</div>
+					<div class="panel-body">
+						<div id="depto" class="col-md-4">
+			    			<div class="form-group1">
+			    				<label for="departamanto">Departamento:</label>
+			    				<select  class="form-control1" name="departamento"> 
+  										<option value="defecto" required="required">Ninguno</option> 
+      									<option value="La Paz">La Paz</option>
+       									<option value="Santa Cruz">Santa Cruz</option>
+                                        <option value="Cochabamba">Cochabamba</option>
+                                        <option value="Chuquisaca">Chuquisaca</option>
+                                        <option value="Tarija">Tarija</option>
+                                        <option value="Oruro">Oruro</option>
+                                        <option value="Potosi">Potosi</option>
+                                        <option value="Beni">Beni</option>
+                                        <option value="Pando">Pando</option>
+   								</select>    
+			    			</div>
+			    		</div>
+
+					    <div id="provincia" class="col-md-4">
+					    	<div class="form-group1">
+					    		<label for="provincia">Provincia:</label>
+					    		<input type="text" class="form-control input-sm" name="provincia">
+					    	</div>
+					    </div>
+
+					    <div id="seccion" class="col-md-4">
+					    	<div class="form-group1">
+					    		<label for="seccion">Sección/Municipio:</label>
+					    		<input type="text" class="form-control input-sm" name="seccion">
+					    	</div>
+					    </div>
+
+					    <div id="zona" class="col-md-4">
+			    			<div class="form-group1">
+			    				<label for="direccion">Zona/Villa:</label>
+			    				<input type="text" class="form-control input-sm" name="zona" placeholder="Zona o avenida">
+			    			</div>
+			    		</div>
+
+			    		<div id="avenida" class="col-md-4">
+			    			<div class="form-group1">
+			    				<label for="direccion">Avenida/Calle:</label>
+			    				<input type="text" class="form-control input-sm" name="calle" placeholder="Avenida o Calle">
+			    			</div>
+			    		</div>
+
+					    <div id="telefono" class="col-md-3">
+					    	<div class="form-group1">
+					    		<label for="telefono">Telefono/Celular:</label>
+					    		<input type="tel" class="form-control input-sm" name="telefono" placeholder="Telefono/Celular">
+					    	</div>
+					    </div>
+
+					    <div id="numero" class="col-md-4">
+			    			<div class="form-group1">
+			    				<label for="numero">Numero de Vivienda:</label>
+			    				<input type="number" class="form-control input-sm" name="numeroCasa" placeholder="Numero de casa">
+			    			</div>
+			    		</div>
+					</div>
+				</div>
+
+				<!--inicio buton-->
+			    <div class="form-group" id="formBoton">
+			        <div id="enviar" class="col-md-6">
+			            <input type="submit" class=" btn btn-sm btn-block btn-primary" value="Enviar" >
+			        </div>
+
+			        <div id="limpiar" class="col-md-6">
+			            <input type="reset" class="btn btn-sm btn-block btn-default" value="limpiar">
+			        </div>
+			    </div>
+			    <!--inicio buton-->
+			</form>
+		</div>
+	</div>
+</div>
+<!--fin container-->
+<!--inicio-footer-->
+<div id="footer1" class="footer">
+	<div class="copy-right">
+		<div class="container">
+			<p class="text-center">2016 Copyright (c) . Sistema realizado por: <class class="text-info">Omar Yanarico Mamani</class></p>
+		</div>
+	</div>
+</div>
+<!---fin-footer-->
+</body>
+</html>
